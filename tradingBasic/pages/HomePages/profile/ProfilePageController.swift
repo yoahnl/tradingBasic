@@ -12,18 +12,19 @@ class ProfilePageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func logOut(_ sender: Any)
+    {
+        let auth: AuthService = AuthService()
+        auth.logOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyboard.instantiateInitialViewController()
+        if let realView = view {
+            realView.modalPresentationStyle = .fullScreen
+            self.present(realView, animated: true, completion: nil)
+        }
     }
-    */
-
+    
 }

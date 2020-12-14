@@ -14,6 +14,7 @@ extension HomePageController {
     {
         self.initHeader()
         self.initProfilePicture()
+        self.initWelcomeMessage()
     }
     
     func initHeader()
@@ -23,28 +24,44 @@ extension HomePageController {
         self.view.addSubview(self.header!)
         self.header?.snp.makeConstraints({ (make) in
             make.top.equalToSuperview()
-            make.height.equalTo(130)
+            make.height.equalTo(110)
             make.width.equalToSuperview()
         })
     }
     
     func initProfilePicture()
     {
+        let auth: AuthService = AuthService()
         self.profilePicture = UIImageView()
-        self.profilePicture?.url("https://pfpmaker.com/img/profile-3-1.3e702c5b.png")
-//        self.profilePicture?.image = self.profilePicture?.image!.cropToBounds(image: (self.profilePicture?.image)!, width: 30, height: 30)
+        self.profilePicture?.url(auth.getuserProfilePicture())
         self.header?.addSubview(self.profilePicture!)
         self.profilePicture?.snp.makeConstraints({ (make) in
-            make.left.equalTo(10)
-            make.height.equalTo(85)
-            make.width.equalTo(85)
-            make.top.equalTo(40)
+            make.right.equalToSuperview().inset(10)
+            make.height.equalTo(65)
+            make.width.equalTo(65)
+            make.top.equalTo(35)
         })
         self.profilePicture?.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.toProfileInfo))
         self.profilePicture?.addGestureRecognizer(tap)
-
     }
     
+    func initWelcomeMessage()
+    {
+        let auth: AuthService = AuthService()
+        let username = auth.getUserInfo().username
+        self.welcomeMessage = UILabel()
+        self.welcomeMessage?.text = "Welcome \(username)"
+        self.welcomeMessage?.textColor = .white
+        self.welcomeMessage?.font = self.welcomeMessage?.font.withSize(30)
+        
+        self.header?.addSubview(self.welcomeMessage!)
+        self.welcomeMessage?.snp.makeConstraints({ (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(15)
+        })
+        
+        
+    }
 
 }

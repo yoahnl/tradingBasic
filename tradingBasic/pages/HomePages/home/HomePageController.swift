@@ -11,10 +11,13 @@ class HomePageController: UIViewController
 {
     var header: UIView?
     var profilePicture: UIImageView?
+    var welcomeMessage: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initUI()
+        let auth: AuthService = AuthService()
+        let test = auth.getUserInfo()
     }
     
     

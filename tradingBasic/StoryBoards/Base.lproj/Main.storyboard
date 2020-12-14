@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +15,234 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzB-Sr-rY3">
+                                <rect key="frame" x="72" y="705" width="271" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KzB-Sr-rY3" secondAttribute="height" multiplier="271:60" id="qq0-jY-qwe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="started"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStartedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IwF-96-JZ6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Trading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZP-8d-sbO">
+                                <rect key="frame" x="37" y="362" width="340" height="66"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should totally read this stuf, like seriously all yo homies love sneak dissing but at least u’re true, right?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBe-lO-vbR">
+                                <rect key="frame" x="29" y="464" width="357" height="147"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="text"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Y18-y6-Wzl">
+                                <rect key="frame" x="20" y="44" width="374" height="412"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="logo"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="green"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="KzB-Sr-rY3" firstAttribute="top" secondItem="fBe-lO-vbR" secondAttribute="bottom" constant="94" id="1Ic-w5-qUl"/>
+                            <constraint firstItem="uZP-8d-sbO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="3Xz-sd-xwc"/>
+                            <constraint firstItem="KzB-Sr-rY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="4dJ-Kc-ZKA"/>
+                            <constraint firstItem="fBe-lO-vbR" firstAttribute="top" secondItem="uZP-8d-sbO" secondAttribute="bottom" constant="36" id="CBj-fg-Ufd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KzB-Sr-rY3" secondAttribute="bottom" constant="97" id="CJD-xX-ON4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uZP-8d-sbO" secondAttribute="trailing" constant="37" id="I2O-wQ-Xsd"/>
+                            <constraint firstItem="Y18-y6-Wzl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IhD-JX-MC3"/>
+                            <constraint firstItem="fBe-lO-vbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="OPP-dm-7yQ"/>
+                            <constraint firstItem="uZP-8d-sbO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="318" id="X6n-bd-ikp"/>
+                            <constraint firstItem="Y18-y6-Wzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XoJ-pG-kcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fBe-lO-vbR" secondAttribute="trailing" constant="28" id="a0u-MT-yzM"/>
+                            <constraint firstItem="fBe-lO-vbR" firstAttribute="top" secondItem="Y18-y6-Wzl" secondAttribute="bottom" constant="8" symbolic="YES" id="gy3-9R-bML"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KzB-Sr-rY3" secondAttribute="trailing" constant="71" id="pWr-2N-9JJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y18-y6-Wzl" secondAttribute="trailing" constant="20" id="t4j-SA-wxJ"/>
+                            <constraint firstItem="Y18-y6-Wzl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ztw-PI-66Z"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="view"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="getStartedButtonOutlet" destination="KzB-Sr-rY3" id="xiA-3q-rnw"/>
+                        <segue destination="jan-dk-oKe" kind="show" identifier="login" id="KE7-mX-WXr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="119"/>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+        </scene>
+        <!--Login Page Controller-->
+        <scene sceneID="zq0-Bk-7tu">
+            <objects>
+                <viewController storyboardIdentifier="login" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jan-dk-oKe" customClass="LoginPageController" customModule="tradingBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zL0-Kg-pk8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-E6-pZ0" customClass="InputTextFieldWithSVG" customModule="tradingBasic" customModuleProvider="target">
+                                <rect key="frame" x="36" y="584" width="344" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="yes" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="svgName" value="password"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="passwordEditingBegin:" destination="jan-dk-oKe" eventType="editingDidBegin" id="Qyc-GD-eHc"/>
+                                    <action selector="passwordEditingEnd:" destination="jan-dk-oKe" eventType="editingDidEnd" id="lmR-WT-HPo"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBf-Y5-OW6">
+                                <rect key="frame" x="72" y="705" width="272" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="d2y-xv-lBn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="fHN-iX-tbY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="started"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStartedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="No3-Xj-1tl"/>
+                                    <action selector="loginButtonAction:" destination="jan-dk-oKe" eventType="touchUpInside" id="KF2-KP-Ldn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-P9-I4R" customClass="InputTextFieldWithSVG" customModule="tradingBasic" customModuleProvider="target">
+                                <rect key="frame" x="36" y="481" width="344" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES" smartDashesType="yes" textContentType="username"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="svgName" value="userIconTextField"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="text"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="usernameEditingBegin:" destination="jan-dk-oKe" eventType="editingDidBegin" id="Fbn-5w-SeQ"/>
+                                    <action selector="usernameEditingEnd:" destination="jan-dk-oKe" eventType="editingDidEnd" id="ChW-GM-LFI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tw-a7-fZb">
+                                <rect key="frame" x="20" y="44" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Tw-a7-fZb" secondAttribute="height" multiplier="1:1" id="0ho-mf-KDT"/>
+                                    <constraint firstAttribute="height" constant="35" id="HIW-AA-EDE"/>
+                                    <constraint firstAttribute="width" constant="35" id="aNb-tv-hxH"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="returnButtonAction:" destination="jan-dk-oKe" eventType="touchUpInside" id="6EV-N3-YD8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Trading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CF-d1-zLc">
+                                <rect key="frame" x="38" y="307" width="340" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="60s-ft-gFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mt1-4i-tGy">
+                                <rect key="frame" x="20" y="87" width="374" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="Zrz-39-eDZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="logo"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sjW-SR-Tci"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sjW-SR-Tci" firstAttribute="trailing" secondItem="Mt1-4i-tGy" secondAttribute="trailing" constant="20" id="3Fx-Xc-ww1"/>
+                            <constraint firstItem="1Tw-a7-fZb" firstAttribute="top" secondItem="sjW-SR-Tci" secondAttribute="top" id="GCS-Hd-g85"/>
+                            <constraint firstItem="2CF-d1-zLc" firstAttribute="centerX" secondItem="Tyx-P9-I4R" secondAttribute="centerX" id="Hww-Mf-LZU"/>
+                            <constraint firstItem="sjW-SR-Tci" firstAttribute="bottom" secondItem="OBf-Y5-OW6" secondAttribute="bottom" constant="97" id="Jo7-MR-VzT"/>
+                            <constraint firstItem="Mt1-4i-tGy" firstAttribute="leading" secondItem="sjW-SR-Tci" secondAttribute="leading" constant="20" id="L8U-X7-j52"/>
+                            <constraint firstItem="rNg-E6-pZ0" firstAttribute="centerX" secondItem="OBf-Y5-OW6" secondAttribute="centerX" id="M51-pa-D9v"/>
+                            <constraint firstItem="rNg-E6-pZ0" firstAttribute="top" secondItem="Tyx-P9-I4R" secondAttribute="bottom" constant="69" id="O2g-Pb-qi5"/>
+                            <constraint firstItem="sjW-SR-Tci" firstAttribute="trailing" secondItem="Tyx-P9-I4R" secondAttribute="trailing" constant="34" id="VpR-Mo-oYk"/>
+                            <constraint firstItem="Mt1-4i-tGy" firstAttribute="top" secondItem="1Tw-a7-fZb" secondAttribute="bottom" constant="8" symbolic="YES" id="VtF-1x-4iy"/>
+                            <constraint firstItem="Tyx-P9-I4R" firstAttribute="leading" secondItem="rNg-E6-pZ0" secondAttribute="leading" id="W7Z-wL-TvA"/>
+                            <constraint firstItem="Tyx-P9-I4R" firstAttribute="leading" secondItem="sjW-SR-Tci" secondAttribute="leading" constant="36" id="Z7V-is-hRU"/>
+                            <constraint firstItem="2CF-d1-zLc" firstAttribute="top" secondItem="Mt1-4i-tGy" secondAttribute="bottom" constant="47" id="cZT-dP-Ksn"/>
+                            <constraint firstItem="2CF-d1-zLc" firstAttribute="leading" secondItem="sjW-SR-Tci" secondAttribute="leading" constant="38" id="gNZ-Ap-vdV"/>
+                            <constraint firstItem="Tyx-P9-I4R" firstAttribute="trailing" secondItem="rNg-E6-pZ0" secondAttribute="trailing" id="hVU-tR-5ar"/>
+                            <constraint firstItem="OBf-Y5-OW6" firstAttribute="top" secondItem="rNg-E6-pZ0" secondAttribute="bottom" constant="87" id="iAq-DM-JQW"/>
+                            <constraint firstItem="1Tw-a7-fZb" firstAttribute="leading" secondItem="sjW-SR-Tci" secondAttribute="leading" constant="20" id="p2R-Xm-Dek"/>
+                            <constraint firstItem="OBf-Y5-OW6" firstAttribute="leading" secondItem="sjW-SR-Tci" secondAttribute="leading" constant="72" id="yVc-Ky-U58"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="view"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="1ic-JC-moE"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="loginButtonOutlet" destination="OBf-Y5-OW6" id="nxa-uv-YTO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWr-Ft-UdA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098.5507246376812" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Tyx-P9-I4R">
+            <size key="intrinsicContentSize" width="94" height="34"/>
+        </designable>
+        <designable name="rNg-E6-pZ0">
+            <size key="intrinsicContentSize" width="90" height="34"/>
+        </designable>
+    </designables>
     <resources>
-        <namedColor name="green">
-            <color red="0.77399998903274536" green="0.94800001382827759" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <image name="cancel" width="512" height="512"/>
+        <image name="logo" width="996" height="412"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -1,0 +1,25 @@
+mutation Login($input: UsersPermissionsLoginInput!) {
+  login(input: $input) {
+    jwt
+    user {
+      id
+      email
+      username      
+    }
+  }
+}
+
+query userInfo($id: ID!) {
+  user(id: $id) {
+    username
+    email
+    profileImage
+  }
+}
+
+query test {
+  tests {
+    id
+    test
+  }
+}
