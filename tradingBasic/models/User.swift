@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct User
+{
+    internal init(username: String, email: String) {
+        self.username = username
+        self.email = email
+    }
+    
+    var username: String
+    var email: String
+}
