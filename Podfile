@@ -9,13 +9,13 @@ target 'tradingBasic' do
   pod 'Hero'
   pod 'lottie-ios'
   pod 'Pastel'
-  pod 'StrapiSwift', '~> 1.0'
-  pod 'Alamofire', '~> 5.2'
   pod 'PocketSVG', '~> 2.6'
   pod 'Apollo'
   pod 'PromisesSwift'
+  pod 'SwiftHTTP'
+  pod 'SwiftyJSON', '~> 4.0'
   pod 'SnapKit', '~> 5.0.0'
-  pod 'BubbleTransition', '~> 3.2.0'
+  pod 'Toast-Swift', '~> 5.0.1'
   target 'tradingBasicTests' do
     inherit! :search_paths
     # Pods for testing

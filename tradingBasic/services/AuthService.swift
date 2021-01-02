@@ -22,14 +22,20 @@ class AuthService
                 switch result {
                 
                 case .success(let data):
+                    if let errors = data.errors {
+                        if !errors.isEmpty {
+                            for error in errors {
+                                reject(error)
+                            }
+                        }
+                    }
                     defaults.setValue(data.data?.login.user.email, forKey: defaultsKeys.email)
                     defaults.setValue(data.data?.login.user.username, forKey: defaultsKeys.username)
                     defaults.setValue(data.data?.login.user.id, forKey: defaultsKeys.UID)
                     defaults.setValue(data.data?.login.jwt, forKey: defaultsKeys.jwt)
                     fulfill(LoginReturn.success)
                 case .failure(_):
-                    let error = NSError(domain:"", code:403, userInfo:[ NSLocalizedDescriptionKey: "Invaild UserName or Password"]) as Error
-                               reject(error)
+                    print("Error")
                 }
             }
         }

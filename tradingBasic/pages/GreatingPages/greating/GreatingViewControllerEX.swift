@@ -5,13 +5,12 @@
 //  Created by Yoahn Linard on 09/12/2020.
 //
 
+import UIKit
+
 struct Tests: Decodable {
     let id: Int
     let test, publishedAt, createdAt, updatedAt: String
 }
-
-import UIKit
-import Alamofire
 
 extension GreatingViewController
 {

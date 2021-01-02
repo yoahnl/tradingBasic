@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebD-cd-b6s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebD-cd-b6s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--my stocks-->
         <scene sceneID="9a5-1c-BaZ">
             <objects>
                 <viewController id="mhT-k4-efW" sceneMemberID="viewController">
@@ -18,11 +19,11 @@
                         <viewLayoutGuide key="safeArea" id="3vJ-XF-zQS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="95P-FV-7wW"/>
+                    <tabBarItem key="tabBarItem" title="my stocks" image="arrow.up.right.and.arrow.down.left.rectangle.fill" catalog="system" id="95P-FV-7wW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6S-zt-4ZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="18"/>
+            <point key="canvasLocation" x="1643" y="496"/>
         </scene>
         <!--Profile Page Controller-->
         <scene sceneID="PHP-n7-XPq">
@@ -53,26 +54,134 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLb-ku-wzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="-1432.3660714285713"/>
+            <point key="canvasLocation" x="-1668" y="1221"/>
         </scene>
         <!--Home-->
         <scene sceneID="ExR-WR-y1G">
             <objects>
                 <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Od0-Rf-d3x" customClass="HomePageController" customModule="tradingBasic" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0XV-Ak-PGD">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="0XV-Ak-PGD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="asV-qi-SxM">
+                                <rect key="frame" x="0.0" y="249" width="414" height="564"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hX0-6X-rnV">
+                                    <size key="itemSize" width="341" height="295"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="articleCell" id="bLm-AG-poZ" customClass="ArticleCell" customModule="tradingBasic" customModuleProvider="target">
+                                        <rect key="frame" x="36.5" y="0.0" width="341" height="295"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rrv-pU-Hrq">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="295"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqn-4m-SPV">
+                                                    <rect key="frame" x="8" y="8" width="325" height="97"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="97" id="zus-CW-LbW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-mX-QBE">
+                                                    <rect key="frame" x="8" y="262" width="135" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="2dU-gk-Tqa"/>
+                                                        <constraint firstAttribute="width" constant="135" id="9hQ-lj-09Y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n9t-Gh-6ld">
+                                                    <rect key="frame" x="8" y="92" width="135" height="135"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="135" id="CYO-Ak-CbT"/>
+                                                        <constraint firstAttribute="width" constant="135" id="eCf-t3-J5I"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuR-Nc-NC9">
+                                                    <rect key="frame" x="151" y="87" width="180" height="195"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="baJ-ob-Lxz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rqn-4m-SPV" firstAttribute="top" secondItem="Rrv-pU-Hrq" secondAttribute="top" constant="8" id="39s-jo-ZHL"/>
+                                                <constraint firstAttribute="bottom" secondItem="ujb-mX-QBE" secondAttribute="bottom" constant="9" id="4ql-td-W2y"/>
+                                                <constraint firstItem="JuR-Nc-NC9" firstAttribute="leading" secondItem="n9t-Gh-6ld" secondAttribute="trailing" constant="8" id="J8A-EF-Rw7"/>
+                                                <constraint firstItem="n9t-Gh-6ld" firstAttribute="leading" secondItem="Rrv-pU-Hrq" secondAttribute="leading" constant="8" id="Koj-u4-Hxn"/>
+                                                <constraint firstItem="n9t-Gh-6ld" firstAttribute="top" secondItem="rqn-4m-SPV" secondAttribute="bottom" constant="-13" id="Na1-cI-99z"/>
+                                                <constraint firstItem="JuR-Nc-NC9" firstAttribute="top" secondItem="rqn-4m-SPV" secondAttribute="bottom" constant="-18" id="St8-fg-q8S"/>
+                                                <constraint firstAttribute="bottom" secondItem="n9t-Gh-6ld" secondAttribute="bottom" constant="68" id="UP9-fm-OOF"/>
+                                                <constraint firstItem="rqn-4m-SPV" firstAttribute="leading" secondItem="Rrv-pU-Hrq" secondAttribute="leading" constant="8" id="fW3-np-X85"/>
+                                                <constraint firstItem="ujb-mX-QBE" firstAttribute="leading" secondItem="Rrv-pU-Hrq" secondAttribute="leading" constant="8" id="fmg-lm-UWQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="JuR-Nc-NC9" secondAttribute="bottom" constant="13" id="gse-8T-Q1f"/>
+                                                <constraint firstAttribute="trailing" secondItem="JuR-Nc-NC9" secondAttribute="trailing" constant="10" id="pmH-BK-RIS"/>
+                                                <constraint firstAttribute="trailing" secondItem="rqn-4m-SPV" secondAttribute="trailing" constant="8" id="tFu-sY-TiT"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="341" height="295"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="content" destination="JuR-Nc-NC9" id="JOB-hc-k62"/>
+                                            <outlet property="illustration" destination="n9t-Gh-6ld" id="rfc-g3-OxD"/>
+                                            <outlet property="source" destination="ujb-mX-QBE" id="rQw-zm-i3g"/>
+                                            <outlet property="title" destination="rqn-4m-SPV" id="Jdo-No-YoI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="withShimmer" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Od0-Rf-d3x" id="EGU-zf-wtc"/>
+                                    <outlet property="delegate" destination="Od0-Rf-d3x" id="E5C-TW-we5"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8f8-Ov-pau"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="yZX-V1-N2h"/>
                     <connections>
+                        <outlet property="tableView" destination="asV-qi-SxM" id="Ef1-j5-sDK"/>
                         <segue destination="Md3-MV-1zb" kind="show" identifier="profile" id="wL6-jR-bUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CW-yC-SIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="-658.25892857142856"/>
+            <point key="canvasLocation" x="-1667" y="496"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QuD-c1-b33">
@@ -87,20 +196,36 @@
                     <connections>
                         <segue destination="Od0-Rf-d3x" kind="relationship" relationship="viewControllers" id="m17-6n-q6a"/>
                         <segue destination="mhT-k4-efW" kind="relationship" relationship="viewControllers" id="28t-gf-5jX"/>
+                        <segue destination="uC0-Mo-cFa" kind="relationship" relationship="viewControllers" id="YT3-BH-Hk7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWc-Gv-hUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57" y="-355"/>
         </scene>
+        <!--stocks-->
+        <scene sceneID="41Z-hJ-hKd">
+            <objects>
+                <viewController id="uC0-Mo-cFa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xTQ-XF-niC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3XA-kc-cvV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="stocks" image="bolt.horizontal.fill" catalog="system" id="imA-xC-U4x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hf0-2q-XBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="496"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.right.and.arrow.down.left.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="bolt.horizontal.fill" catalog="system" width="128" height="60"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

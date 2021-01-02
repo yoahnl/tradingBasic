@@ -15,6 +15,7 @@ extension HomePageController {
         self.initHeader()
         self.initProfilePicture()
         self.initWelcomeMessage()
+        self.initTableView()
     }
     
     func initHeader()
@@ -58,10 +59,29 @@ extension HomePageController {
         self.header?.addSubview(self.welcomeMessage!)
         self.welcomeMessage?.snp.makeConstraints({ (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(15)
+            make.centerY.equalToSuperview().offset(10)
         })
         
         
     }
 
+    func initTableView()
+    {
+        self.refreshController = UIRefreshControl()
+        self.tableView.refreshControl = self.refreshController
+        self.tableView.refreshControl?.addTarget(self, action:
+                                                    #selector(self.refreshNews),
+                                           for: .valueChanged)
+        self.tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.tableView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(115)
+            make.height.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+        
+        self.tableView.startShimmerAnimation(withIdentifier: "articleCell")
+        ShimmerOptions.instance.animationType = .classic
+        ShimmerOptions.instance.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        ShimmerOptions.instance.gradientColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)
+    }
 }
