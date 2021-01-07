@@ -6,15 +6,28 @@ Basic trade is an native iOS application made with UIKit.
 
 This application will help to invest in the difficult but amazing world of trading shares.
 
+This application is avaible is :
+- English
+- French
+- Russian
+- Ukrainian
+
 **Attention !**
+
+To run the projet, first use the following command:
+
+$> pod install  
+$> open tradingBasic.xcworkspace
+
+**Here is a link to the postman to the API:** 
+- https://www.getpostman.com/collections/016b5d2767eca2a16848
 
 **The login are:**
 
 - **Login: Yoahn.l@me.com**
- - **Password: poulet**
+- **Password: poulet**
 
-**Make sure to wait for the server to restart at the first connection ! This takes some time so be patient please**
-
+**Make sure to wait for the server to restart at the first connection ! This takes some time so be patient please.**
 
 # Home
 
