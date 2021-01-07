@@ -1,6 +1,6 @@
 # Welcome to Basic trade!
 
- ![Basic trade logo](https://i.ibb.co/3Sc5McM/1024.png =250x250)
+ ![Basic trade logo](https://i.ibb.co/3Sc5McM/1024.png)
 
 Basic trade is an native iOS application made with UIKit.
 
