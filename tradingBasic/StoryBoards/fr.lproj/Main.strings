@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Basic Trading"; ObjectID = "2CF-d1-zLc"; */
+"2CF-d1-zLc.text" = "Basic Trading";
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "KzB-Sr-rY3"; */
+"KzB-Sr-rY3.normalTitle" = "C'est parti !";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "OBf-Y5-OW6"; */
+"OBf-Y5-OW6.normalTitle" = "Se connecter";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Tyx-P9-I4R"; */
+"Tyx-P9-I4R.placeholder" = "nom d'utilisateur";
+
+/* Class = "UILabel"; text = "You should totally read this stuf, like seriously all yo homies love sneak dissing but at least u’re true, right?"; ObjectID = "fBe-lO-vbR"; */
+"fBe-lO-vbR.text" = "Basic Trading vous permet de rentrer dans le monde du trading de manière simple et efficace. Faites rapidement des profits !";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "rNg-E6-pZ0"; */
+"rNg-E6-pZ0.placeholder" = "mot de passe";
+
+/* Class = "UILabel"; text = "Basic Trading"; ObjectID = "uZP-8d-sbO"; */
+"uZP-8d-sbO.text" = "Basic Trading";

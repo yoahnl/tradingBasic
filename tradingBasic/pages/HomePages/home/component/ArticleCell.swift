@@ -21,7 +21,8 @@ class ArticleCell: UICollectionViewCell
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.goToWebSite))
         self.contentView.addGestureRecognizer(tap)
         self.contentView.layer.cornerRadius = 10
-        self.contentView.backgroundColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        self.contentView.backgroundColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 0.5)
     }
     
     override func layoutSubviews()

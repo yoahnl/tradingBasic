@@ -27,7 +27,7 @@ extension HomePageController
     {
         self.news.getNews().then { (allArticles : [Article])  in
             self.articles = allArticles
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.tableView.reloadData()
                 self.tableView.stopShimmerAnimation()
 

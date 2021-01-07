@@ -23,7 +23,7 @@ extension GreatingViewController
         pastelView.startPastelPoint = .top
         pastelView.endPastelPoint = .bottom
         pastelView.animationDuration = 5.0
-        pastelView.setColors([#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1), #colorLiteral(red: 0.5137254902, green: 0.5058823529, blue: 0.8235294118, alpha: 1), #colorLiteral(red: 0.6392156863, green: 0.9176470588, blue: 0.9647058824, alpha: 1)])
+        pastelView.setColors([#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), #colorLiteral(red: 0.5137254902, green: 0.5058823529, blue: 0.8235294118, alpha: 1), #colorLiteral(red: 0.4684632421, green: 0.6670153737, blue: 0.7072713971, alpha: 1)])
         pastelView.startAnimation()
         view.insertSubview(pastelView, at: 0)
     }

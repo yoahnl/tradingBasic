@@ -15,7 +15,8 @@ class NewsService
     
     func getNews() -> Promise<[Article]>
     {
-        let endpoint = "http://newsapi.org/v2/top-headlines?country=fr&category=business&apiKey=3ce96f9063b44e68940243816492bd22"
+        let source      = NSLocalizedString("SOURCE", comment: "source")
+        let endpoint    = "http://newsapi.org/v2/top-headlines?country=\(source)&category=business&apiKey=3ce96f9063b44e68940243816492bd22"
         
         return Promise<[Article]>(on: .main) { fulfill, reject in
             HTTP.GET(endpoint) {

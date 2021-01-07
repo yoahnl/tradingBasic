@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Pastel
 
 class HomePageController: UIViewController, UICollectionViewDataSource
 {
@@ -19,6 +20,8 @@ class HomePageController: UIViewController, UICollectionViewDataSource
     var articles: [Article]! = []
     var data: [String]! = []
     var refreshController: UIRefreshControl?
+    let emitterLayer = CAEmitterLayer()
+
     @IBOutlet var tableView: UICollectionView!
     
     override func viewDidLoad()
@@ -32,15 +35,18 @@ class HomePageController: UIViewController, UICollectionViewDataSource
     }
     
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         return self.articles.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
         let cell = self.tableView.dequeueReusableCell(withReuseIdentifier: ArticleCell.identifier, for: indexPath) as! ArticleCell
                 if !articles.isEmpty
                 {

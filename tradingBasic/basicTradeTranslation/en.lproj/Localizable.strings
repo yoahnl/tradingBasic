@@ -1,0 +1,36 @@
+/*
+  basicTradeTranslation.strings
+  tradingBasic
+
+  Created by Yoahn Linard on 06/01/2021.
+  
+*/
+
+/*
+ Login page
+ */
+
+"WAIT"          = "Please wait, the server needs to restart...";
+"ERROR_LOGIN"   = "You need to put your username or email and your password !";
+"ERROR"         = "Oups ! There is an error: ";
+
+/*
+ Home
+ */
+
+"WELCOME"       = "Welcome";
+
+/*
+ Stock
+ */
+
+"SOURCE"        = "us";
+"PRICE"         = "Price";
+"NEW"           = "You hace a new share !";
+
+/*
+ My Stock
+ */
+
+"ABORT"         = "abort";
+"WONTHAVE"      = "You want have any share of ";

@@ -1,10 +1,11 @@
+
 mutation Login($input: UsersPermissionsLoginInput!) {
   login(input: $input) {
     jwt
     user {
       id
       email
-      username      
+      username
     }
   }
 }
@@ -13,13 +14,81 @@ query userInfo($id: ID!) {
   user(id: $id) {
     username
     email
-    profileImage
   }
 }
 
-query test {
-  tests {
+query getUsersStocks($input: ID!) {
+  stocks(where: {
+    users_permissions_user: {
+      id: $input
+    }
+  })
+  {
     id
-    test
+    number_stocks
+    company {
+      id
+      Name
+      logo
+      price
+      symbol
+      firstPrice
+    }
+    users_permissions_user {
+      id
+      username
+    }
+  }
+}
+
+query getCompany {
+  companies {
+    id
+    Name
+    logo
+    price
+    symbol
+    firstPrice
+  }
+}
+
+mutation updateCompayPrice($input: updateCompanyInput!)
+{
+  updateCompany(input: $input)
+  {
+    company {
+      id
+      price
+    }
+  }
+}
+
+mutation updateUserStocks($input: updateStockInput) {
+  updateStock(input: $input)
+  {
+    stock {
+      users_permissions_user {
+        username
+      }
+      company {
+        Name
+      }
+      number_stocks
+    }
+  }
+}
+
+mutation createUserStocks($input: createStockInput) {
+  createStock(input: $input)
+  {
+    stock {
+      number_stocks
+      company {
+        Name
+      }
+      users_permissions_user {
+        username
+      }
+    }
   }
 }

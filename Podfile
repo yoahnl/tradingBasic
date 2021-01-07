@@ -16,6 +16,7 @@ target 'tradingBasic' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SnapKit', '~> 5.0.0'
   pod 'Toast-Swift', '~> 5.0.1'
+  pod 'ScrollableGraphView'
   target 'tradingBasicTests' do
     inherit! :search_paths
     # Pods for testing

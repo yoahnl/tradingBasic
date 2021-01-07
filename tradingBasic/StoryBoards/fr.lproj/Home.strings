@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Buy"; ObjectID = "24s-BW-J2Z"; */
+"24s-BW-J2Z.normalTitle" = "Acheter";
+
+/* Class = "UIButton"; normalTitle = "Disconnect"; ObjectID = "3Q8-c9-2cr"; */
+"3Q8-c9-2cr.normalTitle" = "Se déconnecter";
+
+/* Class = "UITabBarItem"; title = "my stocks"; ObjectID = "95P-FV-7wW"; */
+"95P-FV-7wW.title" = "mes actions";
+
+/* Class = "UIButton"; normalTitle = "Sell"; ObjectID = "C45-N3-tLr"; */
+"C45-N3-tLr.normalTitle" = "Vendre";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JuR-Nc-NC9"; */
+"JuR-Nc-NC9.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ojg-UL-bmY"; */
+"Ojg-UL-bmY.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tu2-8K-Y5O"; */
+"Tu2-8K-Y5O.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XW1-td-a3n"; */
+"XW1-td-a3n.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Buy"; ObjectID = "Zel-0v-HKV"; */
+"Zel-0v-HKV.normalTitle" = "Acheter";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Zpj-kj-hoE"; */
+"Zpj-kj-hoE.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "stocks"; ObjectID = "imA-xC-U4x"; */
+"imA-xC-U4x.title" = "actions";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mQs-nD-wGF"; */
+"mQs-nD-wGF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rqn-4m-SPV"; */
+"rqn-4m-SPV.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ujb-mX-QBE"; */
+"ujb-mX-QBE.text" = "Label";
+
+/* Class = "UILabel"; text = "+ 3%"; ObjectID = "xLb-HC-x2o"; */
+"xLb-HC-x2o.text" = "+ 3%";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "yZX-V1-N2h"; */
+"yZX-V1-N2h.title" = "Accueil";

@@ -44,7 +44,7 @@ class LoginPageController: UIViewController
     
     @IBAction func passwordEditingBegin(_ sender: Any)
     {
-        self.view.frame.origin.y -= 90
+        self.view.frame.origin.y -= 120
     }
     
     @IBAction func passwordEditingEnd(_ sender: UITextField)

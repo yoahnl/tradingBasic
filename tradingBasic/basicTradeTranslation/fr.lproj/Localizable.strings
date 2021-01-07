@@ -1,0 +1,36 @@
+/*
+  basicTradeTranslation.strings
+  tradingBasic
+
+  Created by Yoahn Linard on 06/01/2021.
+  
+*/
+
+/*
+ Login page
+ */
+
+"WAIT"          = "Merci de patienter... le serveur redémarre";
+"ERROR_LOGIN"   = "Vous devez mettre votre nom d'utilisateur ou email et votre mot de passe!";
+"ERROR"         = "Oups ! Il y a une erreur: ";
+
+/*
+ Home
+ */
+
+"WELCOME"       = "Bienvenu";
+
+/*
+ Stock
+ */
+
+"SOURCE"        = "fr";
+"PRICE"         = "Prix";
+"NEW"           = "Vous avez une nouvelle action !";
+
+/*
+ My Stock
+ */
+
+"ABORT"         = "annuler";
+"WONTHAVE"      = "Vous n'aurez plus d'actions de ";

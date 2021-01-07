@@ -47,12 +47,15 @@ class AuthService
         let defaults = UserDefaults.standard
         if let usernameFrom = defaults.value(forKey: defaultsKeys.username) {
             if let emailFrom = defaults.value(forKey: defaultsKeys.email) {
-                let username: String = usernameFrom as! String
-                let email: String = emailFrom as! String
-                return User(username: username, email: email)
+                if let idFrom = defaults.value(forKey: defaultsKeys.UID) {
+                    let username: String = usernameFrom as! String
+                    let email: String = emailFrom as! String
+                    let id: String = idFrom as! String
+                    return User(username: username, email: email, id: id)
+                }
             }
         }
-        return User(username: String(), email: String())
+        return User(username: String(), email: String(), id: String())
     }
     
     func getuserProfilePicture() -> String {

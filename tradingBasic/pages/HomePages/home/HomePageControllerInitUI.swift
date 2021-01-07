@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Pastel
 
 extension HomePageController {
 
@@ -16,12 +17,13 @@ extension HomePageController {
         self.initProfilePicture()
         self.initWelcomeMessage()
         self.initTableView()
+        self.initPastelView()
     }
     
     func initHeader()
     {
         self.header = UIView()
-        self.header?.backgroundColor = .systemRed
+        self.header?.backgroundColor = #colorLiteral(red: 0.5137254902, green: 0.5058823529, blue: 0.8235294118, alpha: 0.5)
         self.view.addSubview(self.header!)
         self.header?.snp.makeConstraints({ (make) in
             make.top.equalToSuperview()
@@ -49,10 +51,11 @@ extension HomePageController {
     
     func initWelcomeMessage()
     {
+        let welcome = NSLocalizedString("WELCOME", comment: "Welcome")
         let auth: AuthService = AuthService()
         let username = auth.getUserInfo().username
         self.welcomeMessage = UILabel()
-        self.welcomeMessage?.text = "Welcome \(username)"
+        self.welcomeMessage?.text = "\(welcome) \(username)"
         self.welcomeMessage?.textColor = .white
         self.welcomeMessage?.font = self.welcomeMessage?.font.withSize(30)
         
@@ -72,7 +75,7 @@ extension HomePageController {
         self.tableView.refreshControl?.addTarget(self, action:
                                                     #selector(self.refreshNews),
                                            for: .valueChanged)
-        self.tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        self.tableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.tableView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(115)
             make.height.equalToSuperview()
@@ -81,7 +84,19 @@ extension HomePageController {
         
         self.tableView.startShimmerAnimation(withIdentifier: "articleCell")
         ShimmerOptions.instance.animationType = .classic
-        ShimmerOptions.instance.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        ShimmerOptions.instance.gradientColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)
+        ShimmerOptions.instance.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        ShimmerOptions.instance.gradientColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
+    
+    func initPastelView()
+    {
+        let pastelView = PastelView(frame: view.bounds)
+        pastelView.startPastelPoint = .top
+        pastelView.endPastelPoint = .bottom
+        pastelView.animationDuration = 3.0
+        pastelView.setColors([#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), #colorLiteral(red: 0.5137254902, green: 0.5058823529, blue: 0.8235294118, alpha: 1), #colorLiteral(red: 0.4684632421, green: 0.6670153737, blue: 0.7072713971, alpha: 1)])
+        pastelView.startAnimation()
+        view.insertSubview(pastelView, at: 0)
+    }
+
 }
