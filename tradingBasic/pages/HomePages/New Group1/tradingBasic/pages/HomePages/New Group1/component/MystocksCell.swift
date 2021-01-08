@@ -66,7 +66,6 @@ class MystocksCell: UICollectionViewCell
         self.stockNumber += 1
         stockService.updateUserStocks(id: authService.getUserInfo().id, companyID: self.companyID, stockID: self.stockID, stockNumber: self.stockNumber!).then { _ in
             self.count.text = "number of share: \(String(self.stockNumber))"
-            print(self.totalDouble * Double(self.stockNumber))
             self.totalDouble = self.totalDouble * Double(self.stockNumber)
             self.total.text = "Total: \(String(self.totalDouble.binade))"
         }
@@ -82,7 +81,6 @@ class MystocksCell: UICollectionViewCell
         if self.stockNumber > 0 {
             stockService.updateUserStocks(id: authService.getUserInfo().id, companyID: self.companyID, stockID: self.stockID, stockNumber: self.stockNumber!).then { _ in
                 self.count.text = "number of share: \(String(self.stockNumber))"
-                print(self.totalDouble * Double(self.stockNumber))
                 self.totalDouble = self.totalDouble * Double(self.stockNumber)
                 self.total.text = "Total: \(String(self.totalDouble.binade))"
             }

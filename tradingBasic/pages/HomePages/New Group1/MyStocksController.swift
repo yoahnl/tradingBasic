@@ -34,6 +34,7 @@ class MyStocksController: UIViewController, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
+        
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "myStockCell", for: indexPath) as! MystocksCell
         
         if !userStocks.isEmpty

@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Основная торговля"; ObjectID = "2CF-d1-zLc"; */
+"2CF-d1-zLc.text" = "Основная торговля";
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "KzB-Sr-rY3"; */
+"KzB-Sr-rY3.normalTitle" = "Начинаем !";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "OBf-Y5-OW6"; */
+"OBf-Y5-OW6.normalTitle" = "Войти";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Tyx-P9-I4R"; */
+"Tyx-P9-I4R.placeholder" = "имя пользователя";
+
+/* Class = "UILabel"; text = "Вы должны полностью прочитать этот материал, вот серьезно проскользать эту инфу, но ты же не такой, да?"; ObjectID = "fBe-lO-vbR"; */
+"fBe-lO-vbR.text" = "Основная торговля позволит вам войти в мир торговли просто и с эффективностью. Получайте быструю прибыль !";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "rNg-E6-pZ0"; */
+"rNg-E6-pZ0.placeholder" = "Пароль";
+
+/* Class = "UILabel"; text = "Основная торговля"; ObjectID = "uZP-8d-sbO"; */
+"uZP-8d-sbO.text" = "Основная торговля";

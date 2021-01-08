@@ -123,6 +123,14 @@
 		8A5381AE25869C960009AEC7 /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 		8A5381C72586C34B0009AEC7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A5381D52586D50B0009AEC7 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		8A60E80825A8DFE8003B0CB3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		8A60E80925A8DFF9003B0CB3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Home.strings; sourceTree = "<group>"; };
+		8A60E80A25A8E009003B0CB3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8A60E80B25A8E01A003B0CB3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A60E80C25A8E0C3003B0CB3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		8A60E80D25A8E0DA003B0CB3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Home.strings; sourceTree = "<group>"; };
+		8A60E80E25A8E0EB003B0CB3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8A60E80F25A8E0FB003B0CB3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8A75F13025A0BAB500BDFCAA /* StocksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksController.swift; sourceTree = "<group>"; };
 		8A75F13D25A0BB4B00BDFCAA /* MyStocksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyStocksController.swift; path = "tradingBasic/pages/HomePages/New Group1/MyStocksController.swift"; sourceTree = SOURCE_ROOT; };
 		8A75F14225A0BB9B00BDFCAA /* StocksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksService.swift; sourceTree = "<group>"; };
@@ -612,6 +620,8 @@
 				en,
 				Base,
 				fr,
+				uk,
+				ru,
 			);
 			mainGroup = 8A8130E12577EEBF00D19AB6;
 			packageReferences = (
@@ -872,6 +882,8 @@
 				8A45009025A6550A00A39D8F /* Base */,
 				8A45009925A6573D00A39D8F /* en */,
 				8A4500C325A6663200A39D8F /* fr */,
+				8A60E80825A8DFE8003B0CB3 /* uk */,
+				8A60E80C25A8E0C3003B0CB3 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -882,6 +894,8 @@
 				8A45009D25A6586300A39D8F /* Base */,
 				8A4500A225A6588800A39D8F /* en */,
 				8A4500C425A6664300A39D8F /* fr */,
+				8A60E80925A8DFF9003B0CB3 /* uk */,
+				8A60E80D25A8E0DA003B0CB3 /* ru */,
 			);
 			name = Home.storyboard;
 			sourceTree = "<group>";
@@ -891,6 +905,8 @@
 			children = (
 				8A4500D025A6697900A39D8F /* en */,
 				8A4500D425A6699A00A39D8F /* fr */,
+				8A60E80B25A8E01A003B0CB3 /* uk */,
+				8A60E80F25A8E0FB003B0CB3 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -900,6 +916,8 @@
 			children = (
 				8A8130FC2577EEC000D19AB6 /* Base */,
 				8A4500C525A6665100A39D8F /* fr */,
+				8A60E80A25A8E009003B0CB3 /* uk */,
+				8A60E80E25A8E0EB003B0CB3 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

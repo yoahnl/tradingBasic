@@ -1,0 +1,36 @@
+/*
+  basicTradeTranslation.strings
+  tradingBasic
+
+  Created by Yoahn Linard on 06/01/2021.
+  
+*/
+
+/*
+ Login page
+ */
+
+"WAIT"          = "Ожидайте, пожалуйста... сервер запускается";
+"ERROR_LOGIN"   = "Вы должны указать имя пользователя или емейл и ваш пароль!";
+"ERROR"         = "Упс ! Произошла ошибка : ";
+
+/*
+ Home
+ */
+
+"WELCOME"       = "Добро";
+
+/*
+ Stock
+ */
+
+"SOURCE"        = "ru";
+"PRICE"         = "Цена";
+"NEW"           = "У вас появилась новая акция !";
+
+/*
+ My Stock
+ */
+
+"ABORT"         = "Отменить";
+"WONTHAVE"      = "У вас больше не будет акций от : ";
